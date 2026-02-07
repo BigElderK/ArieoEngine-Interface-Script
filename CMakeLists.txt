@@ -5,14 +5,17 @@ project(ArieoEngine)
 
 arieo_engine_project(
     arieo_scripting_interface
-    ALIAS arieo::interface::script
     ROOT_NAMESPACE Arieo::Interface::Script
     SCRIPT_PACKAGE_NAME arieo:script
     PROJECT_TYPE interface
     PUBLIC_INCLUDE_FOLDERS
         ${CMAKE_CURRENT_SOURCE_DIR}/public/include
+    PACKAGES
+        ArieoEngine-Core
+        ArieoEngine-Interface-Main
     INTERFACES
-        arieo::interface::main
+        ArieoEngine-Interface-Main::arieo_main_interface
+        ArieoEngine-Core::arieo_core
     AST_GENERATE_FOLDER
         ${CMAKE_CURRENT_SOURCE_DIR}/_generated/ast
     NATIVE_CODE_GENERATE_FOLDER
