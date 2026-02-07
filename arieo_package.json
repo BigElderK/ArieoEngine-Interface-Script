@@ -1,5 +1,5 @@
 {
-    "name": "arieo.engine.interface.script",
+    "name": "ArieoEngine-Interface-Script",
     "description": "Script interface for engine",
     "build_commands":
     [
